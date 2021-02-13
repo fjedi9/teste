@@ -1,0 +1,433 @@
+{
+	"info": {
+		"_postman_id": "fc8286d6-d613-4018-966d-480597f6d9f4",
+		"name": "Api_Rest_Platfrom",
+		"description": "teste de api REST(GET,PUT,DELETE e PATCH).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9000/platform/v1/clients?page=0&size=5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/platform/v2/clients?page=0&size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v2",
+						"clients"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				},
+				"description": "teste de GET Com Paginaçao"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/findByCpf/12345608900",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/platform/v2/clients/findByCpf/123456789001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v2",
+						"clients",
+						"findByCpf",
+						"123456789001"
+					]
+				},
+				"description": "Teste de Get por Busca de CPF."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/findByCpf/12345608900",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/platform/v2/clients/findClientByName/Jose maria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v2",
+						"clients",
+						"findClientByName",
+						"Jose maria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgZG8gUGxhdGZvcm1CdWlsZGVycyIsInN1YiI6IjEiLCJpYXQiOjE1Nzg1MDIyMjIsImV4cCI6MTU3ODU4ODYyMn0.IvYaNCwrg6YtnoGFP6iDU0QrDZM944GGLrPdfhMGlJQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\n   \t       \"id\": 2,\n            \"nome\": \"NovoNome\",\n            \"cpf\": \"00000000001\",\n            \"dataNascimento\": \"2001-12-03\"\n       \n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/platform/v2/clients/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v2",
+						"clients",
+						"2"
+					]
+				},
+				"description": "teste de PUT."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgZG8gUGxhdGZvcm1CdWlsZGVycyIsInN1YiI6IjEiLCJpYXQiOjE1Nzg1MDIyMjIsImV4cCI6MTU3ODU4ODYyMn0.IvYaNCwrg6YtnoGFP6iDU0QrDZM944GGLrPdfhMGlJQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/platform/v2/clients/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v2",
+						"clients",
+						"3"
+					]
+				},
+				"description": "teste de DELETE"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/5",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgZG8gUGxhdGZvcm1CdWlsZGVycyIsInN1YiI6IjEiLCJpYXQiOjE1Nzg1MDIyMjIsImV4cCI6MTU3ODU4ODYyMn0.IvYaNCwrg6YtnoGFP6iDU0QrDZM944GGLrPdfhMGlJQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": 1,\r\n        \"nome\": \"Jose Maria dos Santos da Rosa\",\r\n        \"cpf\": \"123456789001\",\r\n        \"dataNascimento\": \"2000-11-03\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/platform/v2/clients/partialChange/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v2",
+						"clients",
+						"partialChange",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/10",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/platform/v2/clients/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v2",
+						"clients",
+						"1"
+					]
+				},
+				"description": "busca por um ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/platform/v2/clients/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v2",
+						"clients",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgZG8gUGxhdGZvcm1CdWlsZGVycyIsInN1YiI6IjEiLCJpYXQiOjE1Nzg1MDIyMjIsImV4cCI6MTU3ODU4ODYyMn0.IvYaNCwrg6YtnoGFP6iDU0QrDZM944GGLrPdfhMGlJQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgZG8gUGxhdGZvcm1CdWlsZGVycyIsInN1YiI6IjEiLCJpYXQiOjE1NzgxNzE0NzYsImV4cCI6MTU3ODI1Nzg3Nn0.2MUsH4DSW8CPBQBV-EVdMrjmcKa77GushooIhu7rRao",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \r\n        \"nome\": \"Jose Roberto Rodrigues Novo\",\r\n        \"cpf\": \"100446190010\",\r\n        \"dataNascimento\": \"1992-11-04\"\r\n       \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/platform/v2/clients/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v2",
+						"clients",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/platform/v2/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v2",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticacao-post(Gerar TOKEN)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"fleitao@com\",\n  \"senha\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/platform/v1/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v1",
+						"auth"
+					]
+				},
+				"description": "Esta API e somente para geracao do Token."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

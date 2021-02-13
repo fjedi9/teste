@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "17990832-2204-404f-8cc1-5c1d6e218cb4",
+		"name": "Api_Rest_Platfrom",
+		"description": "teste de api REST(GET,PUT,DELETE e PATCH).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9000/platform/v1/clients?page=0&size=5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/platform/v1/clients?page=0&size=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v1",
+						"clients"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				},
+				"description": "teste de GET Com Paginaçao"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/findByCpf/12345608900",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/platform/v1/clients/findByCpf/12345608900",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v1",
+						"clients",
+						"findByCpf",
+						"12345608900"
+					]
+				},
+				"description": "Teste de Get por Busca de CPF."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/findByCpf/12345608900",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/platform/v1/clients/findByCpf/12345608900",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v1",
+						"clients",
+						"findByCpf",
+						"12345608900"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \r\n        \"nome\": \"Jose Roberto Rodrigues\",\r\n        \"cpf\": \"12345618911\",\r\n        \"dataNascimento\": \"1988-12-04\"\r\n       \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/platform/v1/clients/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v1",
+						"clients",
+						""
+					]
+				},
+				"description": "teste de PUT."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/2",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/platform/v1/clients/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v1",
+						"clients",
+						"2"
+					]
+				},
+				"description": "teste de DELETE"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/5",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": 5,\r\n        \"nome\": \"Jose Maria dos Santos da Rosa\",\r\n        \"cpf\": \"12345678900\",\r\n        \"dataNascimento\": \"2008-11-03\",\r\n        \"idade\": 11\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/platform/v1/clients/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v1",
+						"clients",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/10",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/platform/v1/clients/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v1",
+						"clients",
+						"10"
+					]
+				},
+				"description": "busca por um ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/platform/v1/clients/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v1",
+						"clients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/platform/v1/clients/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \r\n        \"nome\": \"Jose Roberto Rodrigues\",\r\n        \"cpf\": \"12345618911\",\r\n        \"dataNascimento\": \"1988-11-04\"\r\n       \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/platform/v1/clients/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"platform",
+						"v1",
+						"clients",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
